@@ -35,8 +35,44 @@
   <nav class="site-nav" role="navigation" aria-label="Navegación principal">
     <div class="nav-inner">
       <a class="nav-logo" href="/">
-        <img src="/assets/images/NicheLogoMAIN.png" alt="Niche" height="22" loading="eager">
+        <img src="/assets/images/NicheMainLogo.png" alt="Niche" height="22" loading="eager">
       </a>
+
+      <!-- Centre links -->
+      <div class="nav-links">
+
+        <!-- Proyectos dropdown -->
+        <div class="nav-dropdown">
+          <button class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Proyectos
+            <svg class="nav-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="/feratiye" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-name">Fernando Atiye</span>
+              <span class="nav-dropdown-tag">Gastronomía</span>
+            </a>
+            <a href="/impermeabilizante" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-name">Impermeabilizantes</span>
+              <span class="nav-dropdown-tag">Construcción</span>
+            </a>
+            <a href="https://getrewired.org" target="_blank" rel="noopener noreferrer" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-name">Rewired ↗</span>
+              <span class="nav-dropdown-tag">Technology</span>
+            </a>
+            <a href="/consultoria" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-name">Consultoría Estratégica</span>
+              <span class="nav-dropdown-tag">Estrategia</span>
+            </a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="/historia">Historia</a>
+
+      </div><!-- /.nav-links -->
+
       <a class="nav-cta" href="mailto:contacto.niche@gmail.com">Contacto</a>
     </div>
   </nav>
@@ -78,8 +114,8 @@
 
           <!-- Card 2 — Impermeabilizantes -->
           <a href="/impermeabilizante" class="card fade-up">
-            <div class="card-image">
-              <img src="/assets/images/ImpermeabilizanteAdCreative.jpg"
+            <div class="card-image card-image--contain">
+              <img src="/assets/images/Impermeabilizante.png"
                    alt="Impermeabilizantes Acuario Construpro para construcción residencial"
                    width="800" height="450" loading="lazy">
             </div>

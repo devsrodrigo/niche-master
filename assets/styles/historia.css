@@ -1,0 +1,222 @@
+/* ============================================================
+   historia.css — Historia page styles for niche.com.mx
+   Hero · Intro · Filosofía · Proyectos · Cierre
+   ============================================================ */
+
+/* ---------- Fade Up Keyframes ---------- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Hero ---------- */
+.hist-hero {
+  padding-top: 160px;
+  padding-bottom: 80px;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hist-hero .label {
+  animation: fadeUp 0.5s ease forwards;
+  animation-delay: 0s;
+  opacity: 0;
+}
+
+.hist-hero h1 {
+  font-size: clamp(32px, 4.5vw, 58px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--color-text);
+  margin-top: var(--space-2);
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeUp 0.5s ease forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.hist-hero .subtext {
+  font-size: 17px;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-3);
+  line-height: 1.7;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeUp 0.5s ease forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+/* ---------- Shared Section ---------- */
+.hist-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+@media (min-width: 1024px) {
+  .hist-section {
+    padding-top: var(--space-15);
+    padding-bottom: var(--space-15);
+  }
+}
+
+.hist-section h2 {
+  font-size: clamp(24px, 3vw, 38px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-top: var(--space-1);
+  margin-bottom: var(--space-3);
+  max-width: 700px;
+}
+
+.hist-section p {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  max-width: 680px;
+  margin-bottom: var(--space-3);
+}
+
+.hist-section p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* ---------- Stat Row ---------- */
+.hist-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+}
+
+@media (min-width: 640px) {
+  .hist-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.hist-stat {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: var(--space-3);
+}
+
+.hist-stat-number {
+  display: block;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.hist-stat-label {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-top: 6px;
+}
+
+/* ---------- Pull Quote ---------- */
+.hist-quote {
+  margin: var(--space-6) 0;
+  padding: var(--space-5) var(--space-4);
+  border-left: 3px solid var(--color-text);
+}
+
+.hist-quote blockquote {
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+/* ---------- Proyectos Grid ---------- */
+.hist-projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .hist-projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.hist-project-item {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.hist-project-item:hover {
+  background: var(--color-hover-bg);
+}
+
+.hist-project-tag {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.hist-project-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-top: 4px;
+}
+
+.hist-project-desc {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-top: 6px;
+}
+
+/* ---------- Closing Section ---------- */
+.hist-cierre {
+  padding-top: 72px;
+  padding-bottom: 72px;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .hist-cierre {
+    padding-top: var(--space-15);
+    padding-bottom: var(--space-15);
+  }
+}
+
+.hist-cierre h2 {
+  font-size: clamp(24px, 3vw, 38px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--space-3);
+}
+
+.hist-cierre p {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto var(--space-3);
+}

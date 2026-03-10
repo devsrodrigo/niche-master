@@ -18,6 +18,36 @@
     }, { passive: true });
   }
 
+  // --- Dropdown: click toggle + keyboard + outside-click dismiss ---
+  var triggers = document.querySelectorAll(".nav-dropdown-trigger");
+  triggers.forEach(function (trigger) {
+    var dropdown = trigger.closest(".nav-dropdown");
+    trigger.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var isOpen = dropdown.classList.toggle("open");
+      trigger.setAttribute("aria-expanded", isOpen);
+    });
+    trigger.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        var isOpen = dropdown.classList.toggle("open");
+        trigger.setAttribute("aria-expanded", isOpen);
+      }
+      if (e.key === "Escape") {
+        dropdown.classList.remove("open");
+        trigger.setAttribute("aria-expanded", "false");
+        trigger.focus();
+      }
+    });
+  });
+
+  document.addEventListener("click", function () {
+    triggers.forEach(function (trigger) {
+      trigger.closest(".nav-dropdown").classList.remove("open");
+      trigger.setAttribute("aria-expanded", "false");
+    });
+  });
+
   // --- IntersectionObserver for fade-up elements ---
   var fadeEls = document.querySelectorAll(".fade-up");
   if (fadeEls.length && "IntersectionObserver" in window) {
