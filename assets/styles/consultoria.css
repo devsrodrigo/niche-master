@@ -1,0 +1,161 @@
+/* ============================================================
+   consultoria.css — Consulting page styles
+   Hero · Services · CTA
+   ============================================================ */
+
+/* ---------- Hero ---------- */
+.con-hero {
+  text-align: center;
+  padding-top: 160px;
+  padding-bottom: 72px;
+}
+
+@media (min-width: 1024px) {
+  .con-hero {
+    padding-bottom: var(--space-15);
+  }
+}
+
+.con-hero .label {
+  animation: fadeUp 0.5s ease forwards;
+  animation-delay: 0s;
+  opacity: 0;
+}
+
+.con-hero h1 {
+  font-size: clamp(32px, 4.5vw, 56px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--color-text);
+  margin-top: var(--space-2);
+  animation: fadeUp 0.5s ease forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.con-hero .subtext {
+  font-size: 17px;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-3);
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  animation: fadeUp 0.5s ease forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+/* ---------- Fade Up Keyframes ---------- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Services Section ---------- */
+.services {
+  padding-top: 72px;
+  padding-bottom: 72px;
+  border-top: 1px solid var(--color-border);
+}
+
+@media (min-width: 1024px) {
+  .services {
+    padding-top: var(--space-15);
+    padding-bottom: var(--space-15);
+  }
+}
+
+.services h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-top: var(--space-1);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-card {
+  padding: var(--space-3) 0;
+  border-top: 2px solid var(--color-accent);
+}
+
+.service-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-top: var(--space-2);
+}
+
+.service-card p {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+/* ---------- CTA Section ---------- */
+.con-cta {
+  background: var(--color-bg-subtle);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-12) 0;
+  text-align: center;
+}
+
+.con-cta h2 {
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.con-cta p {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  margin-top: 12px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.con-cta .email-link {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-text);
+  margin-top: var(--space-3);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.con-cta .email-link:hover {
+  color: var(--color-text-secondary);
+  border-color: var(--color-text-secondary);
+}

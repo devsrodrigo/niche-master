@@ -1,0 +1,152 @@
+/* ============================================================
+   impermeabilizante.css — Waterproofing page styles
+   Hero · Products · CTA
+   ============================================================ */
+
+/* ---------- Hero ---------- */
+.imp-hero {
+  text-align: center;
+  padding-top: 160px;
+  padding-bottom: 72px;
+}
+
+@media (min-width: 1024px) {
+  .imp-hero {
+    padding-bottom: var(--space-15);
+  }
+}
+
+.imp-hero .label {
+  animation: fadeUp 0.5s ease forwards;
+  animation-delay: 0s;
+  opacity: 0;
+}
+
+.imp-hero h1 {
+  font-size: clamp(32px, 4.5vw, 56px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--color-text);
+  margin-top: var(--space-2);
+  animation: fadeUp 0.5s ease forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.imp-hero .subtext {
+  font-size: 17px;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-3);
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  animation: fadeUp 0.5s ease forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.imp-hero .btn-primary {
+  margin-top: var(--space-4);
+  animation: fadeUp 0.5s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+/* ---------- Fade Up Keyframes ---------- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Products Section ---------- */
+.products {
+  padding-top: 72px;
+  padding-bottom: 72px;
+  border-top: 1px solid var(--color-border);
+}
+
+@media (min-width: 1024px) {
+  .products {
+    padding-top: var(--space-15);
+    padding-bottom: var(--space-15);
+  }
+}
+
+.products h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-top: var(--space-1);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.product-card {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: var(--space-3);
+  background: var(--color-bg);
+}
+
+.product-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.product-card p {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+.products-note {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--color-text-muted);
+  margin-top: var(--space-3);
+}
+
+/* ---------- CTA Section ---------- */
+.imp-cta {
+  background: var(--color-bg-subtle);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-12) 0;
+  text-align: center;
+}
+
+.imp-cta p {
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 500;
+  color: var(--color-text);
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.imp-cta .btn-primary {
+  margin-top: var(--space-4);
+}
