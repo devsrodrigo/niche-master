@@ -141,6 +141,7 @@ button, input, textarea {
 }
 
 .nav-inner {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -203,6 +204,9 @@ button, input, textarea {
 @media (min-width: 640px) {
   .nav-links {
     display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
