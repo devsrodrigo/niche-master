@@ -34,6 +34,10 @@
   opacity: 0;
 }
 
+.hero h1 .hero-light {
+  color: #7c7c7c;
+}
+
 .hero .subtext {
   font-size: 18px;
   color: var(--color-text-secondary);
