@@ -3,11 +3,19 @@
    Hero · Projects Grid · Contact · Animations
    ============================================================ */
 
+
 /* ---------- Hero Section ---------- */
 .hero {
   text-align: center;
   padding-top: 160px;
   padding-bottom: 72px;
+  position: relative;
+  z-index: 1;
+}
+
+body.home-bg {
+  background: url('/assets/images/Artboard3-100.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
 @media (min-width: 1024px) {
